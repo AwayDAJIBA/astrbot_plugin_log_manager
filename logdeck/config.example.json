@@ -1,0 +1,15 @@
+{
+  "name": "LogDeck",
+  "host": "127.0.0.1",
+  "port": 17890,
+  "token": "",
+  "dataDir": "data",
+  "historyLines": 400,
+  "maxLogMb": 30,
+  "healthIntervalSec": 20,
+  "autostartStaggerMs": 1500,
+  "takeoverIntervalMs": 5000,
+  "startAllOnBoot": true,
+  "sessions": [],
+  "ui": {}
+}

@@ -1,0 +1,31 @@
+# runtime data
+data/
+plugin_data/
+test-temp/
+*.log
+manager-launch.log
+manager.pid
+
+# secrets / local config
+config.json
+.env
+*.secret
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# local screenshots (keep docs/screenshot.png)
+!docs/screenshot.png
+*.local.png

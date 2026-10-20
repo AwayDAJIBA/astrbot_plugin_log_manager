@@ -1,0 +1,16 @@
+{
+  "name": "logdeck-core",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "LogDeck local multi-terminal / log manager core (bundled with the AstrBot plugin)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test:smoke": "node ../test/smoke.mjs",
+    "test:takeover": "node ../test/takeover.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

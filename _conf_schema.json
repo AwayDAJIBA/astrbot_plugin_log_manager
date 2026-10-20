@@ -1,0 +1,92 @@
+{
+  "manager_url": {
+    "type": "string",
+    "label": "LogDeck 地址",
+    "description": "WebUI / API 地址，默认 http://127.0.0.1:17890 。auto_start 只支持本机地址。",
+    "default": "http://127.0.0.1:17890"
+  },
+  "token": {
+    "type": "string",
+    "label": "访问令牌（留空自动生成）",
+    "description": "留空时插件会自动生成并保存在插件数据目录；连接已有管理器时请填它的 token。",
+    "default": ""
+  },
+  "auto_start": {
+    "type": "bool",
+    "label": "自动启动内置管理器",
+    "description": "插件加载时自动在后台启动内置的 LogDeck Node 服务（需要 Node.js 18+）。关闭后只连接手动运行的管理器。",
+    "default": true
+  },
+  "node_path": {
+    "type": "string",
+    "label": "Node.js 路径（可选）",
+    "description": "留空自动从 PATH 查找 node；也可填 node.exe 的绝对路径。",
+    "default": ""
+  },
+  "start_timeout": {
+    "type": "int",
+    "label": "启动等待秒数",
+    "description": "等待内置管理器启动并响应 /api/info 的最长秒数。",
+    "default": 25
+  },
+  "request_timeout": {
+    "type": "int",
+    "label": "请求超时（秒）",
+    "description": "单次请求 LogDeck HTTP API 的超时时间。",
+    "default": 10
+  },
+  "default_lines": {
+    "type": "int",
+    "label": "默认读取行数",
+    "description": "读日志工具不传行数时默认读取多少行。",
+    "default": 80
+  },
+  "max_lines": {
+    "type": "int",
+    "label": "最大读取行数",
+    "description": "读日志工具单次最多返回多少行。",
+    "default": 300
+  },
+  "require_admin_read": {
+    "type": "bool",
+    "label": "读日志需要管理员",
+    "description": "打开后只有 AstrBot 管理员能读日志列表/内容；默认关闭。",
+    "default": false
+  },
+  "require_admin_manage": {
+    "type": "bool",
+    "label": "管理操作需要管理员",
+    "description": "启动/停止/重启/新建/删除/清空/发送输入都需要管理员身份。建议保持开启。",
+    "default": true
+  },
+  "allow_manage": {
+    "type": "bool",
+    "label": "允许启动/停止/重启",
+    "description": "是否允许 agent 启停、重启会话。",
+    "default": true
+  },
+  "allow_create": {
+    "type": "bool",
+    "label": "允许新建会话",
+    "description": "是否允许 agent 新建后台终端或日志文件跟踪会话。",
+    "default": true
+  },
+  "allow_delete": {
+    "type": "bool",
+    "label": "允许删除会话",
+    "description": "高风险操作，默认关闭。",
+    "default": false
+  },
+  "allow_clear": {
+    "type": "bool",
+    "label": "允许清空日志",
+    "description": "高风险操作，默认关闭。",
+    "default": false
+  },
+  "allow_input": {
+    "type": "bool",
+    "label": "允许向进程发送输入",
+    "description": "是否允许 agent 向正在运行的进程 stdin 写入内容，默认关闭。",
+    "default": false
+  }
+}

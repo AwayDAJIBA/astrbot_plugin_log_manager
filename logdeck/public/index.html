@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LogDeck · 日志管理器</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<!--LOGDECK_BOOT-->
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">▣</div>
+      <div class="brand-text"><b>LogDeck</b><span>多终端 · 日志管理器</span></div>
+    </div>
+    <div class="side-tools">
+      <button id="btn-new" class="btn primary block">＋ 新增会话</button>
+      <div class="side-search">
+        <input id="side-filter" placeholder="筛选会话…" autocomplete="off">
+        <kbd>Ctrl+K</kbd>
+      </div>
+      <div class="side-row">
+        <label class="check"><input type="checkbox" id="compare-mode"> 对比选择</label>
+        <button id="btn-compare" class="btn small" disabled>对比 (0)</button>
+      </div>
+    </div>
+    <div id="session-list" class="session-list"></div>
+    <div class="side-footer">
+      <span id="conn-dot" class="conn-dot"></span>
+      <span id="conn-text">连接中…</span>
+      <button id="btn-side-collapse" class="icon-btn" title="收起侧栏">‹</button>
+    </div>
+  </aside>
+  <main id="main">
+    <header id="topbar">
+      <button id="btn-side-open" class="icon-btn only-collapsed" title="展开侧栏">›</button>
+      <div id="tabs" class="tabs"></div>
+      <div class="top-actions">
+        <div id="layout-switch" class="layout-switch">
+          <button data-layout="1" title="单窗格 (Alt+1)">▢</button>
+          <button data-layout="2" title="左右分栏 (Alt+2)">▥</button>
+          <button data-layout="3" title="三栏 (Alt+3)">▦</button>
+          <button data-layout="4" title="四宫格 (Alt+4)">⊞</button>
+        </div>
+        <button id="btn-start-all" class="btn small ghost" title="启动所有会话">▶ <span>全部启动</span></button>
+        <button id="btn-stop-all" class="btn small ghost" title="停止所有会话">■ <span>全部停止</span></button>
+        <button id="btn-settings" class="icon-btn" title="设置">⚙</button>
+      </div>
+    </header>
+    <div id="pane-area" class="pane-area layout-1"></div>
+    <div id="empty-state" class="empty-state hidden">
+      <div class="empty-logo">▣</div>
+      <h2>还没有打开任何日志</h2>
+      <p>从左侧选择一个会话，或者新建一个后台终端。</p>
+      <div class="empty-actions">
+        <button class="btn primary" id="empty-new">＋ 新增会话</button>
+        <button class="btn" id="empty-compare">对比日志</button>
+      </div>
+    </div>
+  </main>
+</div>
+<div id="modal-root"></div>
+<div id="toast-root" class="toast-root"></div>
+<script src="/js/core.js"></script>
+<script src="/js/sidebar.js"></script>
+<script src="/js/panes.js"></script>
+<script src="/js/tabs.js"></script>
+<script src="/js/modals.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
