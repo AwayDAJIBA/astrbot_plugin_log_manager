@@ -1,5 +1,8 @@
 name: astrbot_plugin_log_manager
 display_name: LogDeck 日志管理器
 desc: '内置 WebUI 的多终端/日志管理器：启动任意后台命令并捕获 stdout/stderr，支持多标签与分栏对比、日志文件跟踪、端口健康检查；为 agent 提供查看/搜索/新增/启停日志会话的 LLM 工具。仅保留 WebUI，无桌面窗口。⚠️ 本项目由 LLM 生成，使用前请自行审查代码。'
-version: v1.0.0
+version: v1.0.1
 author: AwayDAJIBA
+repo: https://github.com/AwayDAJIBA/astrbot_plugin_log_manager
+short_desc: 内置 WebUI 的多终端 / 日志管理器，给 agent 提供日志查看与管理工具。
+astrbot_version: ">=4.0.0"

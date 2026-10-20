@@ -55,7 +55,7 @@ HELP_TEXT = """LogDeck 日志管理器命令：
     PLUGIN_NAME,
     "AwayDAJIBA",
     "LogDeck 日志管理器：内置 WebUI，查看/新增/管理本机后台终端与日志（由 LLM 生成，请自行审查代码）。",
-    "v1.0.0",
+    "v1.0.1",
 )
 class LogManagerPlugin(Star):
     def __init__(self, context: Context, config: dict | None = None) -> None:
